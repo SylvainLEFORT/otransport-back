@@ -23,11 +23,6 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
  */
 class ManagingDeliveryController extends AbstractController
 {
-<<<<<<< Updated upstream
-    
-
-=======
->>>>>>> Stashed changes
 
     /**
      * get list of pending deliveries
@@ -38,9 +33,6 @@ class ManagingDeliveryController extends AbstractController
         // préparer les données
         $pendingList = $deliveryRepository->findPendingDeliveries();
         //La méthode json va "serializer" les données, c'est à dire les transformer en JSON.
-<<<<<<< Updated upstream
-        return $this->json($pendingList, Response::HTTP_OK, [], ['groups' => "api_deliveries_pending_list"]);
-=======
         return $this->json($pendingList, Response::HTTP_OK, [], ['groups' => "api_deliveries_list"]);
     }
 
@@ -54,7 +46,6 @@ class ManagingDeliveryController extends AbstractController
         $completedList = $deliveryRepository->findCompletedDeliveries();
         //La méthode json va "serializer" les données, c'est à dire les transformer en JSON.
         return $this->json($completedList, Response::HTTP_OK, [], ['groups' => "api_deliveries_list"]);
->>>>>>> Stashed changes
     }
 
     /**
