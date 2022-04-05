@@ -16,60 +16,94 @@ class Delivery
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Groups("api_deliveries_details")
      */
     private $id;
 
     /**
      * @ORM\Column(type="smallint")
+<<<<<<< Updated upstream
      * @Groups("api_deliveries_pending_list")
+=======
+     * @Groups("api_deliveries_details")
+     * @Groups("api_deliveries_list")
+>>>>>>> Stashed changes
      */
     private $status;
 
     /**
      * @ORM\Column(type="string", length=255)
+<<<<<<< Updated upstream
      * @Groups("api_deliveries_pending_list")
+=======
+     * @Groups("api_deliveries_details")
+     * @Groups("api_deliveries_list")
+>>>>>>> Stashed changes
      */
     private $merchandise;
 
     /**
      * @ORM\Column(type="float")
+<<<<<<< Updated upstream
      * @Groups("api_deliveries_pending_list")     
+=======
+     * @Groups("api_deliveries_details")
+     * @Groups("api_deliveries_list")     
+>>>>>>> Stashed changes
      */
     private $volume;
 
     /**
      * @ORM\Column(type="string", length=510, nullable=true)
+<<<<<<< Updated upstream
      * @Groups("api_deliveries_pending_list")
+=======
+     * @Groups("api_deliveries_details")
+     * @Groups("api_deliveries_list")
+>>>>>>> Stashed changes
      */
     private $comment;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups("api_deliveries_details")
      */
     private $created_at;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
+     * @Groups("api_deliveries_details")
      */
     private $updated_at;
 
     /**
      * @ORM\ManyToOne(targetEntity=Customer::class, inversedBy="deliveries")
      * @ORM\JoinColumn(nullable=false)
+<<<<<<< Updated upstream
      * @Groups("api_deliveries_pending_list") 
+=======
+     * @Groups("api_deliveries_details")
+     * @Groups("api_deliveries_list") 
+>>>>>>> Stashed changes
      */
     private $customer;
 
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="deliveriesCreatedByAdmin")
+     * @Groups("api_deliveries_details")
      * @ORM\JoinColumn(nullable=false)
      */
     private $admin;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="deliveriesCarriedByDriver")
+<<<<<<< Updated upstream
      * @ORM\JoinColumn(nuldeliveries_pending_list     
+=======
+     * @ORM\JoinColumn(nullable=true)
+     * @Groups("api_deliveries_details")
+>>>>>>> Stashed changes
      */
     private $driver;
     

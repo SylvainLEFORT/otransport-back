@@ -20,6 +20,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * @Groups("api_drivers_list")
+<<<<<<< Updated upstream
+=======
+     * @Groups("api_drivers_details")
+     * @Groups("api_drivers_delete")
+     * @Groups("api_deliveries_details")
+>>>>>>> Stashed changes
      */
     private $id;
 
@@ -32,6 +38,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\Column(type="json")
      * @Groups("api_drivers_list")
+<<<<<<< Updated upstream
+=======
+     * @Groups("api_deliveries_details")
+     * @Groups("api_drivers_delete")
+>>>>>>> Stashed changes
      */
     private $roles = [];
 
@@ -44,12 +55,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\Column(type="string", length=50)
      * @Groups("api_drivers_list")
+<<<<<<< Updated upstream
+=======
+     * @Groups("api_drivers_details")
+     * @Groups("api_drivers_delete")
+     * @Groups("api_deliveries_details")
+>>>>>>> Stashed changes
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=50)
      * @Groups("api_drivers_list")
+<<<<<<< Updated upstream
+=======
+     * @Groups("api_drivers_details")
+     * @Groups("api_drivers_delete")
+     * @Groups("api_deliveries_details")
+>>>>>>> Stashed changes
      */
     private $lastname;
 
@@ -58,6 +81,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $picture;
 
+<<<<<<< Updated upstream
+=======
+     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("api_drivers_details")
+     * @Groups("api_drivers_delete")
+     * @Groups("api_deliveries_details")
+     */
+    private $phoneNumber;
+
+>>>>>>> Stashed changes
     /**
      * @ORM\Column(type="smallint", nullable=true)
      */

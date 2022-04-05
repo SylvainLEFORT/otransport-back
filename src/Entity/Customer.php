@@ -23,17 +23,37 @@ class Customer
 
     /**
      * @ORM\Column(type="string", length=255)
+<<<<<<< Updated upstream
      * @Groups("api_deliveries_pending_list") 
+=======
+     * @Groups("api_deliveries_list")
+     * @Groups("api_deliveries_details")
+>>>>>>> Stashed changes
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+<<<<<<< Updated upstream
      * @Groups("api_deliveries_pending_list") 
+=======
+     * @Groups("api_deliveries_list") 
+     * @Groups("api_deliveries_details")
+>>>>>>> Stashed changes
      */
     private $address;
 
     /**
+<<<<<<< Updated upstream
+=======
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups("api_deliveries_list")
+     * @Groups("api_deliveries_details") 
+     */
+    private $phoneNumber;
+
+    /**
+>>>>>>> Stashed changes
      * @ORM\OneToMany(targetEntity=Delivery::class, mappedBy="customer")
      */
     private $deliveries;
