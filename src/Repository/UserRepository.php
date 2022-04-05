@@ -41,12 +41,9 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         return $query->getResult();
     }
 
-<<<<<<< Updated upstream
-=======
     
 
 
->>>>>>> Stashed changes
     /**
      * @throws ORMException
      * @throws OptimisticLockException
